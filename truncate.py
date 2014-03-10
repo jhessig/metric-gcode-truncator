@@ -9,9 +9,6 @@ def replace(match):
 	return "." + match[0:4]
 
 pattern = re.compile(r"([.])([0-9]+)")
-#for i in re.findall(pattern, data):
-#	print i.replace(i, i[0:5])
-
 output = re.sub(pattern, replace, data)
 new_filename = filename[:-3] + '-truncated.nc'
 file = open(new_filename, "w")
